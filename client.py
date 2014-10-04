@@ -27,6 +27,6 @@ class HTTPClient(asyncore.dispatcher):
         sent = self.send(self.buffer)
         self.buffer = self.buffer[sent:]
 
-client = HTTPClient('127.0.0.1', '/')
+client = HTTPClient('127.0.0.1', '/index.html')
 
 asyncore.loop()
